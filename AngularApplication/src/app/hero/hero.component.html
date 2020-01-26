@@ -1,0 +1,12 @@
+<p>
+  <input type="text" [(ngModel)]="hero.name" />
+  {{hero.name | uppercase}}
+  <button (click)="call(hero)">asfsad</button>
+
+  <li *ngFor="let hero of heroes2">{{hero.name}}</li>
+  <li *ngIf="heroes2.length>1">More Items</li>
+</p>
+<div [ngStyle]="comp">Hello, i am</div>
+
+<app-hero-exp [heroPass]="heroes2" (heroEmitter)="emittedFn($event)"></app-hero-exp>
+
